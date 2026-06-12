@@ -344,17 +344,17 @@ export const INITIAL_ASSIGNMENTS: Assignment[] = [
 
 export const MOCK_JD_ANALYSIS: JDAnalysisResult = {
   skillsRequired: [
-    'React & Typescript',
-    'Node.js & Express APIs',
-    'Tailwind CSS Styling',
-    'Responsive User Experience Layouts',
-    'REST Integration'
+    'React & Frontend Architecture',
+    'Node.js & Backend Rest APIs',
+    'Responsive Fluid Layout styling',
+    'SQL/NoSQL database management',
+    'Flexible Problem Solving (DSA)'
   ],
   topicsToLearn: [
     'State management optimization (useMemo, useCallback)',
-    'Fullstack CORS & API route middleware',
-    'Fluid grid styles, breakpoint layouts',
-    'TypeScript interface design'
+    'Dynamic routing and secure server middleware',
+    'Unified query execution across relational schemas',
+    'Designing highly-adaptable interfaces and grids'
   ],
   interviewQuestions: [
     {

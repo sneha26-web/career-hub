@@ -42,11 +42,11 @@ app.post("/api/analyze-jd", async (req, res) => {
 
   if (ai) {
     try {
-      const prompt = `You are an expert technical recruiter and placement coach. Analyze the following Job Description and extract:
-1. Skills required (strictly technical/conceptual, max 5)
-2. Custom core topics the student must study/master
-3. Exactly 3 tailored interview questions (a mix of coding, technical, and HR) with brief answers matching the role
-4. A 3-phase study roadmap (Phase 1, Phase 2, Phase 3 with custom durations and descriptions)
+      const prompt = `You are an expert technical recruiter and placement coach. Analyze the following Job Description (this can be highly flexible, spanning multiple, all, or general technical/corporate roles; make sure you process any and all job requirements fully to construct a multi-disciplinary prep program):
+1. Skills required (strictly technical/conceptual, max 5, representing any and all roles outlined)
+2. Custom core topics the student must study/master across all domains mentioned
+3. Exactly 3 tailored interview questions (a mix of coding, technical, and HR) with brief answers matching all requirements
+4. A 3-phase study roadmap (Phase 1, Phase 2, Phase 3 with custom durations and descriptions spanning the whole requirement scope)
 5. 2 recommended learning resource categories or specific guides with URLs (invent suitable resources if needed)
 
 Format the entire response STRICTLY as a single JSON object. No markdown syntax blockers, just clean JSON.
@@ -113,6 +113,10 @@ ${jd.substring(0, 4000)}
   }
   if (jd.toLowerCase().includes("java") || jd.toLowerCase().includes("spring")) {
     extractedSkills.push("Java Foundations & JPA");
+  }
+  if (jd.toLowerCase().includes("flexible") || jd.toLowerCase().includes("all roles") || jd.toLowerCase().includes("fullstack")) {
+    extractedSkills.push("Multi-Disciplinary Solutions");
+    extractedSkills.push("Dynamic Tech Adaptability");
   }
 
   return res.json({

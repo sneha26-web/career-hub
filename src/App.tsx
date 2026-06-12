@@ -88,7 +88,7 @@ export default function App() {
       name: 'Gabriella ',
       branch: 'Computer Science and Engineering',
       skills: 'JavaScript, React, CSS, Basic Data Structures',
-      targetRole: 'Associate Software Engineer',
+      targetRole: 'Flexible / All Roles (supports any requirements)',
       resumeName: 'GABRIELLA_RESUME.pdf'
     };
   });
@@ -1155,22 +1155,82 @@ export default function App() {
                         className="w-full bg-[#090D16] border border-slate-800 rounded-2xl p-4 text-sm text-white focus:border-blue-500 placeholder-slate-650 outline-none resize-none font-mono"
                       />
 
-                      <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                        <button
-                          type="button"
-                          onClick={() => {
-                            setJdText(`Role: Backend Associate Engineer
+                      <div className="flex flex-col gap-4">
+                        <div className="text-left">
+                          <label className="text-[11px] font-bold text-slate-450 uppercase tracking-wider block mb-2">
+                            ✨ Quick Seed Role Templates (Flexible & Multi-disclinary)
+                          </label>
+                          <div className="flex flex-wrap gap-2">
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setJdText(`Role: Full Stack Developer
 Key requirements:
-- Construct performant Express API route handlers in Node.JS & TypeScript.
-- Design relational PostgreSQL structure or schema. Ensure SQL query optimization.
-- Write unit test scripts and implement security rules.
-- Integrate third party cloud systems.`);
-                            addNotification("Seeded standard corporate description template", "info");
-                          }}
-                          className="text-xs text-blue-400 hover:underline cursor-pointer"
-                        >
-                          Use mock Job Description template instead
-                        </button>
+- Design performance-focused backend REST API web servers using Node.js & Express.
+- Build clean component layouts, interactive dashboards, and grids in React with Tailwind CSS.
+- Keep data persistent using modern SQL databases and optimize schema indices.`);
+                                addNotification("Seeded Full Stack Developer template", "info");
+                              }}
+                              className="bg-[#0B1220] hover:bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs font-semibold cursor-pointer transition-all duration-150 hover:border-slate-705"
+                            >
+                              💻 Full Stack Dev
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setJdText(`Role: Data Analyst
+Key requirements:
+- Mine analytical data using advanced SQL aggregates, joins, and database tables.
+- Formulate high-impact report dashboards in Tableau and Power BI.
+- Clean complex telemetry datasets using Python (Pandas, NumPy) and review statistics.`);
+                                addNotification("Seeded Data Analyst template", "info");
+                              }}
+                              className="bg-[#0B1220] hover:bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs font-semibold cursor-pointer transition-all duration-150 hover:border-slate-705"
+                            >
+                              📈 Data Analyst
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setJdText(`Role: Prompt Engineer & GenAI Specialist
+Key requirements:
+- Design system prompts and models recipes for Large Language Models (LLMs).
+- Interlink LangChain retrieval augmented generation pipelines with vector database embeddings.
+- Inspect and refine model execution temperature, check hallucination gaps, and prevent injection attacks.`);
+                                addNotification("Seeded Prompt Engineer template", "info");
+                              }}
+                              className="bg-[#0B1220] hover:bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs font-semibold cursor-pointer transition-all duration-150 hover:border-slate-705"
+                            >
+                              🧠 Prompt Engineer
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setJdText(`Role: Product Manager
+Key requirements:
+- Write detailed Product Requirement Documents (PRDs) and plan user sprint roadmaps.
+- Analyze daily active metrics, optimize onboarding conversion scores, and size backlogs using RICE rules.
+- Team up with product engineering leads through daily agile sprint and scrum assemblies.`);
+                                addNotification("Seeded Product Manager template", "info");
+                              }}
+                              className="bg-[#0B1220] hover:bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs font-semibold cursor-pointer transition-all duration-150 hover:border-slate-705"
+                            >
+                              🎯 Product Manager
+                            </button>
+                          </div>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row items-center justify-end gap-3 pt-2">
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setJdText("");
+                              addNotification("Clear input", "info");
+                            }}
+                            className="w-full sm:w-auto bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:bg-slate-800 text-xs font-semibold px-4 py-2.5 rounded-xl cursor-pointer transition-colors"
+                          >
+                            Clear Input
+                          </button>
 
                         <button
                           onClick={handleAnalyzeJD}
@@ -1191,14 +1251,15 @@ Key requirements:
                         </button>
                       </div>
                     </div>
-
-                    {jdError && (
-                      <div className="mt-4 p-3.5 bg-red-500/10 border border-red-500/30 text-red-400 rounded-xl text-xs flex items-center gap-2">
-                        <AlertTriangle className="w-4 h-4 text-red-400" />
-                        {jdError}
-                      </div>
-                    )}
                   </div>
+
+                  {jdError && (
+                    <div className="mt-4 p-3.5 bg-red-500/10 border border-red-500/30 text-red-400 rounded-xl text-xs flex items-center gap-2">
+                      <AlertTriangle className="w-4 h-4 text-red-400" />
+                      {jdError}
+                    </div>
+                  )}
+                </div>
 
                   {/* Job Analysis Outputs */}
                   {jdAnalysisResult && (
