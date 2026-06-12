@@ -1,0 +1,6 @@
+{
+  "name": "CareerHub",
+  "description": "An interactive student career preparation and placement platform offering Job Description analysis, AI career chatbot, study planner, mock tests, previous interview questions, and and tracked study schedule.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
